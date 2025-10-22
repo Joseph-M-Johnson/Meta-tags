@@ -1,0 +1,145 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Navbar */
+header {
+    background: #DDEAD0;
+    color: #4A4A4A;
+    padding: 0.5rem 1rem;
+    position: sticky;
+    top: 0;
+    height: 6vh;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5rem;
+
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #4A4A4A;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    text-decoration: none;
+    color: #6A7BA2;
+    font-weight: 700;
+    font-size: 1.7rem;
+    transition: ease-in-out 0.3s;
+}
+
+/* Hamburger Icon */
+.menu-icon {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+/* Sections */
+.section {
+    padding: 80px 20px;
+    min-height: 100vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#home {
+    background: #F5F5F5;
+    color: #6A7BA2;
+    height: 100vh;
+    font-size: 1.5rem;
+    padding: 20rem;
+}
+
+#community {
+    background: #F5F5F5;
+    color: #6A7BA2;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 1.5rem;
+}
+
+#contact {
+    background: #F5F5F5;
+    color: #6A7BA2;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 1.5rem;
+}
+
+/* Footer */
+footer {
+    background: #DDEAD0;
+    color: #4A4A4A;
+    text-align: center;
+    padding: 1rem;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        left: -100%;
+        width: 100%;
+        background: #444;
+        flex-direction: column;
+        text-align: center;
+        transition: left 0.3s;
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+
+    #menu-toggle:checked+.menu-icon+.nav-links {
+        left: 0;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+}
